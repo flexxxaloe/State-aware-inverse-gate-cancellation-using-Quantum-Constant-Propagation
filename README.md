@@ -2,7 +2,7 @@
 
 This repository contains the implementation developed as part of my Bachelor's thesis at the Technical University of Munich.
 
-The project extends **Quantum Constant Propagation (QCP)** with a layer-based optimization pass that detects and removes groups of gates whose combined effect leaves the quantum state unchanged.
+The project extends **Quantum Constant Propagation (QCP)** with a layer-based optimization pass that detects and removes sequences of gates whose combined effect leaves the quantum state unchanged.
 
 ## Overview
 
