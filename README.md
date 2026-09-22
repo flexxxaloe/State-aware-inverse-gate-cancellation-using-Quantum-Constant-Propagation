@@ -6,9 +6,9 @@ The project extends **Quantum Constant Propagation (QCP)** with a layer-based op
 
 ## Overview
 
-Quantum Constant Propagation optimizes quantum circuits by propagating information about the states of qubits through the circuit. This allows it to remove gates that have no effect on the current state and to simplify or remove controlled operations whose controls are known.
+Quantum Constant Propagation optimizes quantum circuits by propagating information about the states of qubits through the circuit. This allows QCP to remove gates that have no effect on the current state and to simplify or remove controlled operations.
 
-However, QCP analyzes gates individually and therefore cannot detect sequences of gates that are redundant only when considered together.
+But, QCP analyzes gates individually and therefore cannot detect sequences of gates that are redundant only when considered together.
 
 This project extends QCP by dividing the circuit into layers and storing snapshots of the abstract qubit states after every layer. Windows of consecutive layers are analyzed by comparing the states at their boundaries. If the relevant qubit states are equivalent up to global phase, gates inside the window can be removed while preserving the semantics of the circuit.
 
@@ -28,7 +28,7 @@ The implementation adds:
 
 The implementation is written in Python and uses [Qiskit](https://github.com/Qiskit/qiskit) for quantum circuit representation and manipulation.
 
-The analysis tracks abstract quantum states using a bounded representation. If the size of a tracked state exceeds the configured limit, the state is conservatively treated as unknown.
+The analysis tracks abstract quantum states using a bounded representation. If the size of a tracked state exceeds the configured limit, the state is treated as unknown.
 
 ## Acknowledgements
 
